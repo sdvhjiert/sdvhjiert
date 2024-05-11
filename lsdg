@@ -1,0 +1,24 @@
+try { 
+             
+			// Assuming the external client has been created and connection is 
+      // established 
+			// The following call typically search for the UserName and return an 
+      // External UserProfile 
+			aUserProfileData aUPD = externalUserMgr.getUserProfileData(loginId); 
+			String password = aUPD.getCredential(); 
+			 
+            // Create basic User information (firstname, 
+            // middlename, lastname, 
+            // address, etc.) 
+            String firstName = aUPD.getFirstName(); 
+            String lastName = aUPD.getLastName(); 
+            String middleName = aUPD.getMiddleInitial(); 
+            String gender = aUPD.getGender(); 
+            String salutation = aUPD.getOccupation(); 
+            String street1 = aUPD.getStreet(); 
+            String street2 = aUPD.getStreetNumber(); 
+            String city = aUPD.getCity(); 
+            String state = aUPD.getState(); 
+            String postalcode = aUPD.getZipCode(); 
+            String country = aUPD.getCountry(); 
+            String phone = aUPD.getFixedPhone(); 
