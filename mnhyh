@@ -1,0 +1,17 @@
+// It is safe to check the activation date and use current date if null 
+        if ( actdate == null ) { 
+            setCreateDate(new Date()); 
+            setActivateDate(new Date()); 
+        } 
+        else { 
+            setCreateDate(actdate); 
+            setActivateDate(actdate); 
+        } 
+         
+	   	setDeActivateDate(deactdate); 
+        setSalutation(salutation); 
+        setIsEnabled(enabled); 
+        setUniqueDeviceId(uniqueDeviceId); 
+        setIsPrepay(isprepay); 
+    } 
+ 
