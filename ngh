@@ -1,0 +1,20 @@
+           <div id="box-t">         <!--轮播图-->
+				<div id="left">
+					<span><</span>      <!--左箭头-->
+				</div>
+				<div id="right">         <!--右箭头-->
+					<span>></span>
+				</div>
+				<img class="tup" src="img/3.jpg"/>    <!--获取图片-->
+				<img src="img/1.jpg"/>
+				<img src="img/2.jpg"/>
+				<img src="img/4.jpg"/>
+				<img src="img/5.jpg"/>
+				<div class="box-t-y">           <!--按钮-->
+					<p class="box-y-x"></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>
+			</div>
