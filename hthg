@@ -1,0 +1,44 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.min.js"></script>
+	<script>
+		class Enemy {
+		  constructor(health, name) {
+		    this.health = health;
+		    this.initHealth = health;
+		    this.name = name;
+		  }
+		}
+		
+		const development = true;
+		
+		class AudioController {
+		  constructor(audioArray, helpers) {
+		    this.sampleCount = 0;
+		    this.loadedIndex = 0;
+		    this.sfxOn = true;
+		
+		    if (helpers == undefined) {
+		      this.helpers = true;
+		    }
+		
+		    // Affirm in console that module has been included
+		    console.log(
+		      "%c 🔊 Audio module active ",
+		      "padding: 10px; background: #cbfd9f; color: #3b4e2a"
+		    );
+		
+		    // Helpers
+		    if (this.helpers) {
+		      if (audioArray.length == 0) {
+		        console.warn("No audio array or audio array empty");
+		      }
+		    }
+		
+		    audioArray.forEach(
+		      function (aud, index) {
+		        if (aud.stackSize != undefined) {
+		          this.sampleCount += aud.stackSize;
+		        } else {
+		          this.sampleCount += 1;
+		        }
+		      }.bind(this)
+		    );
