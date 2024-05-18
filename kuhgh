@@ -1,0 +1,13 @@
+#include <QWebEngineView>
+#include <QApplication>
+ 
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+ 
+    QWebEngineView view;
+    view.load(QUrl(QStringLiteral("http://www.example.com")));
+    view.show();
+ 
+    return app.exec();
+}
