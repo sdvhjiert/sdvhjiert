@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>飞行员训练</title>
+
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<link rel="stylesheet" type="text/css" href="game.css">
+	<script type="text/javascript" src="game.js"></script>
+
+<style>
+    .page-footer {
+    	  position: fixed;
+    	  right: 0px;
+    	  bottom: 0px;
+    	  display: flex;
+    	  align-items: center;
+    	  padding: 5px;
+    	  color: black;
+    	  background: rgba(255, 255, 255, 0.65);
+    	}
+    	.page-left {
+    	  position: fixed;
+    	  left: 0px;
+    	  bottom: 0px;
+    	  display: flex;
+    	  align-items: center;
+    	  padding: 5px;
+    	  color: black;
+    	  background: rgba(255, 255, 255, 0.65);
+    	}
+    	
+    	.page-footer a {
+    	  display: flex;
+    	  margin-left: 4px;
+    	}
+    	.touxiang{
+    		bottom: 0px;
+    		width:30px;
+    		height:30px;
+    	}
+    </style>
+    	<script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
+    	<script>LA.init({id:"JxVJPIpe3UAQqoDx",ck:"JxVJPIpe3UAQqoDx"})</script>
+    	<script>
+    	var _hmt = _hmt || [];
+    	(function() {
+    	  var hm = document.createElement("script");
+    	  hm.src = "https://hm.baidu.com/hm.js?a9430a37066911650e26adadcc42798a";
+    	  var s = document.getElementsByTagName("script")[0]; 
+    	  s.parentNode.insertBefore(hm, s);
+    	})();
+    	</script>
+    	<!-- 谷歌广告 -->
+    	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7056167681359419" crossorigin="anonymous"></script>
+</head>
+
+<div class="gamecenter-activator"></div>
+
+<body onload="setTimeout(function(){window.scrollTo(0,1)},1);">
+	<div id="ajaxbar">
+		<div id="game"><canvas id="canvas"></canvas></div>
+
+		<div id="orientate"><img src="media/graphics/orientate/landscape.jpg" /></div>
+		<div id="play" class="play" onclick=""><img src="media/graphics/splash/mobile/cover-start.jpg" /></div>
+		<img id="scrollDown" width="220" height="277"></img>
+
+
+	</div>
+	<footer class="page-footer">
+	  <span>更多游戏👉</span>
+	  <a href="https://haiyong.site/moyu" target="_blank">
+		<img class="touxiang"  src="https://haiyong.site/img/favicon.png">
+	  </a>
+	</footer>
+	<footer class="page-left">  
+	  <a href="https://code.haiyong.site/" target="_blank">
+		<img class="touxiang"  src="https://code.haiyong.site/wp-content/uploads/2022/10/logo.jpg">
+	  </a>
+	  <span>👈游戏源码</span>
+	</footer>
+</body>
+</html>
