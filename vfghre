@@ -1,0 +1,7 @@
+[HttpGet] // 方法及路径
+public async Task<ActionResult<List<Staff>>> GetAllStaff()
+{
+    var staffList = await _context.Staff.ToListAsync();
+​
+    return Ok(staffList);
+}
