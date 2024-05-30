@@ -1,0 +1,64 @@
+exec(); exec();函数执行一个外部命令，并返回最后一行输出
+实例：
+<?php
+//代码审计命令注入
+$action = $_GET('cmd');
+echo "<pre>";
+echo exec($action);
+echo "<pre/>"
+?>
+
+shell_exec():shell_exec();函数执行一个shell命令，
+并返回输出作为字符串，和exec()不同的是shell_exec()返回的是完整的内容，并不是最后一行
+实例：
+<?php
+//代码审计命令注入
+$action = $_GET('cmd');
+echo "<pre>";
+echo shell_exec($action);
+echo "<pre/>"
+?>
+
+system();system()函数执行一个外部命令，
+并输出结果与exec();不同之处在于system();直接输出结果到输出流，而不是将其返回。
+实例：
+<?php
+//代码审计命令注入
+$action = $_GET('cmd');
+echo "<pre>";
+system($action);
+echo "<pre/>"
+?>
+
+passthru();passthru()函数执行一个外部命令，
+并将输出直接发送到标准输出。它与system()类似，但是不会对输出进行任何处理，直接将其发送到输出流。
+实例：
+<?php
+//代码审计命令注入
+$action = $_GET('cmd');
+echo "<pre>";
+passthru($action);
+echo "<pre/>"
+?>
+
+``反引号 直接输出执行结果
+实例：
+<?php
+//代码审计命令注入
+$action = $_GET('cmd');
+echo "<pre>";
+echo `$action`;
+echo "<pre/>"
+?>
+
+Popen 返回一个执行结果
+实例：
+<?php
+//代码审计命令注入
+$action = $_GET('cmd');
+echo "<pre>";
+echo popen($action,'r');
+echo "<pre/>"
+?>
+
+cmd=ls -a 返回值为2说明这个命令已经被执行了
