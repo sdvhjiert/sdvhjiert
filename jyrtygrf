@@ -1,0 +1,7 @@
+test('fetchData 返回结果为 Promise: { success: true }', () => {
+  return expect(fetchData()).resolves.toMatchObject({
+    data: {
+      success: true
+    }
+  })
+})
