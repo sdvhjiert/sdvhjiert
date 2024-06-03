@@ -1,0 +1,37 @@
+<?php
+class A {
+    public $mack;
+
+}
+
+class B {
+    public $luo;
+
+}
+
+class C {
+    public $wang1;
+
+
+}
+
+
+class D {
+    public $lao;
+    public $chen;
+
+}
+
+class E {
+    public $name = "xxxxx";
+    public $num;
+
+    
+    
+}
+$e=new E();
+$e->name=new D();
+$e->name->lao=new B();
+$e->name->lao->luo=new A();
+$e->name->lao->luo->mack=new C();
+echo(serialize($e));
