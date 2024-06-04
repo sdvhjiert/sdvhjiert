@@ -1,0 +1,25 @@
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+ 
+import java.util.Date;
+import java.util.Map;
+ 
+public class JWT {
+ 
+    private static final String password = "test";
+    private static final int time = 3600 * 1000;
+    //生成令牌
+    public static String getJWT(Map<String,Object> map){
+        return Jwts.builder().signWith(SignatureAlgorithm.HS256,password)
+                .addClaims(map).setExpiration(new Date(System.currentTimeMillis() + time))
+                .compact();
+    }
+ 
+ 
+    //解析令牌
+    public static Claims parse(String s){
+        return Jwts.parser().setSigningKey(password).parseClaimsJws(s).getBody();
+    }
+ 
+}
