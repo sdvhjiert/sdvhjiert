@@ -1,0 +1,28 @@
+/**
+       * 表格点击页码时触发
+       */
+      const handleTableChange = (pagination: any) => {
+        console.log("看看自带的分页参数都有啥：" + pagination);
+        handleQuery({
+          page: pagination.current,
+          size: pagination.pageSize
+        });
+      };
+ 
+      // -------- 表单 ---------
+      /**
+       * 数组，[100, 101]对应：前端开发 / Vue
+       */
+      const categoryIds = ref();
+      const ebook = ref();
+      const modalVisible = ref(false);
+      const modalLoading = ref(false);
+      const handleModalOk = () => {
+        modalLoading.value = true;
+        ebook.value.category1Id = categoryIds.value[0];
+        ebook.value.category2Id = categoryIds.value[1];
+        axios.post("/ebook/save", ebook.value).then((response) => {
+          modalLoading.value = false;
+          const data = response.data; // data = commonResp
+          if (data.success) {
+            modalVisible.value = false;
