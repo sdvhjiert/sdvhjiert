@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+  },
+  "navigationBarTitleText": "rh"
+}
+page{
+font-family: Arial, Helvetica, sans-serif;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+box-sizing: border-box;
+}
