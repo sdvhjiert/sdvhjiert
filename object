@@ -1,0 +1,28 @@
+ myDr.Close();
+                    object[,] rv = new object[rowdata.Count, _fieldcount];
+                    for (int i = 0; i < rowdata.Count; i++)
+                    {
+                        for (int j = 0; j < _fieldcount; j++)
+                        {
+                            rv[i, j] = ((object[])rowdata[i])[j];
+                        }
+                    }
+                    return rv;
+ 
+                }
+			 
+ 
+                catch (DmException e)
+                {
+                    ErrorMessage = e.Message;
+                    return null;
+                }
+ 
+                finally
+                {
+                    Conn.Close();
+                    Conn.Dispose();
+                }
+            }//dm8
+            return null;
+}//getreaddata
