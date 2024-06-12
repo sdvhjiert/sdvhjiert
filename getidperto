@@ -1,0 +1,9 @@
+  function getid(id) { alert(checkIdcard(id)) }
+    function per18To15(perIDSrc) { rstr = ''; for (var i = 0; i < 17; i++) { if ((i == 6) || (i == 7)) { continue; } rstr += perIDSrc.charAt(i); } return rstr; }
+    function per15To18(perIDSrc) {
+        var iS = 0; var iW = new Array;
+        iW[0] = 7; iW[1] = 9; iW[2] = 10; iW[3] = 5; iW[4] = 8; iW[5] = 4; iW[6] = 2; iW[7] = 1; iW[8] = 6; iW[9] = 3; iW[10] = 7; iW[11] = 9; iW[12] = 10; iW[13] = 5; iW[14] = 8; iW[15] = 4; iW[16] = 2;
+        var LastCode = '10X98765432'; var perIDNew; perIDNew = perIDSrc.substr(0, 6); perIDNew += '19'; perIDNew += perIDSrc.substr(6, 9);
+        for (var i = 0; i < 17; i++) { iS += parseInt(perIDNew.substr(i, 1)) * iW[i]; }
+        var iY = iS % 11; perIDNew += LastCode.substr(iY, 1); return perIDNew;
+    }
