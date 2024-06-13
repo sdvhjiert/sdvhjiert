@@ -1,0 +1,10 @@
+<div id="pitemdetail" runat="server" class="query-box" onclick="waittip(this);window.location='answer.aspx?cid={wxmpCid}&pid={cid}'" 
+                style="border-radius:5px; cursor:pointer; padding:10px; background-color:White; margin-bottom:10px">
+                   <div style="display:flex;flex-direction:row; flex-wrap:wrap;justify-content:space-between; "><label style="cursor:pointer; font-size:12pt; color:Gray; "  >
+                   <b>{name}</b></label>{dtip}</div>
+                    <div style="width:100%; color:Silver; ">{dname}</div>
+                    
+                    <div></div>
+</div><!-- pitemdetail  -->
+ 
+<asp:Literal ID="result" runat="server"></asp:Literal>
