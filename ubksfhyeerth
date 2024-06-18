@@ -1,0 +1,15 @@
+# ubuntu/debian
+sudo apt update
+sudo apt install lsof
+stop ollama
+lsof -i :11434
+kill <PID>
+ollama serve
+
+# centos
+sudo yum update
+sudo yum install lsof
+stop ollama
+lsof -i :11434
+kill <PID>
+ollama serve
